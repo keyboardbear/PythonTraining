@@ -4,13 +4,12 @@ def solution(nums):
         for j in range(i+1,len(nums)-1):
             for k in range(j+1,len(nums)):
                 sum_num=nums[i]+nums[j]+nums[k]    
-                is_prime=True
                 for t in range(2,int(sum_num ** 0.5) + 1):
                     if sum_num % t ==0:
                         is_prime=False
                         break
-
-                if is_prime:
-                    answer+=1
+                else:
+                        answer+=1
+               
                     
     return answer
